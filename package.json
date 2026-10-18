@@ -1,0 +1,66 @@
+{
+  "name": "dsh-effort-dial",
+  "version": "0.1.0",
+  "description": "Codex-style reasoning-effort dial for DeepSeek Harness — a pixel-matched slider that switches the current session's reasoning effort. · 复刻 Codex 推理强度选择框：滑杆切换当前会话的推理强度。",
+  "type": "module",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "src",
+    "docs",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "keywords": [
+    "deepseek",
+    "harness",
+    "dsh",
+    "dsh-plugin",
+    "reasoning-effort",
+    "codex"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lushdawn/dsh-effort-dial.git"
+  },
+  "homepage": "https://github.com/Lushdawn/dsh-effort-dial#readme",
+  "bugs": {
+    "url": "https://github.com/Lushdawn/dsh-effort-dial/issues"
+  },
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    },
+    "compatibility": {
+      "dsh": ">=0.1.0-rc.5"
+    }
+  },
+  "dshhub": {
+    "schemaVersion": 1,
+    "displayName": "Effort Dial",
+    "summary": "复刻 Codex 推理强度选择框：滑块切换当前会话的 reasoning effort，顶部显示档位与模型，右侧一键重置。Codex-style reasoning effort dial for DSH: drag the slider to change the session's effort, reset to the model default.",
+    "categories": [
+      "Web UI",
+      "模型"
+    ],
+    "surfaces": [
+      "web"
+    ],
+    "permissions": {
+      "network": []
+    }
+  }
+}
